@@ -1,4 +1,4 @@
-# Happy Birthday <img src="\icon for readme\android-svgrepo-com__1_-removebg-preview.png" width="20" height="20"></img>
+# Happy Birthday <img src="\icon for readme\android-svgrepo-com__1_-removebg-preview.png" width="50" height="50"></img>
 
 ### Curso: Noções básicas do Android com Compose
 

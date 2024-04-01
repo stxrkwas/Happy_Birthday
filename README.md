@@ -2,4 +2,4 @@
 
 ### Curso: Noções básicas do Android com Compose
 
-- Exercício: Criar um cartão de aniversário com o Android Studio.
+- <b>Exercício:</b> Criar um cartão de aniversário com o Android Studio.

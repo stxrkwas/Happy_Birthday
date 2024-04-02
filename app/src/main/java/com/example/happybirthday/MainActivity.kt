@@ -34,12 +34,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    GreetingText(
-                        stringResource("Happy Birthday Sam!")
-                                stringResource("From Emma")
-                        /*message = "Happy Birthday Sam!",
-                        from = "From Emma",
-                        modifier = Modifier.padding(8.dp)*/
+                    GreetingImage(
+                        stringResource(R.string.happy_birthday_text),
+                        stringResource(R.string.signature_text)
                     )
                 }
             }
@@ -57,25 +54,46 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
             text = message,
             fontSize = 100.sp,
             lineHeight = 116.sp,
-            textAlign = TextAlign.Center
+            textAlign = TextAlign.Center,
+            modifier = Modifier.padding(top = 16.dp)
         )
         Text(text = from,
             fontSize = 36.sp,
             modifier = Modifier
-                .padding(16.dp)
+                .padding(top = 16.dp)
+                .padding(end = 16.dp)
                 .align(alignment = Alignment.End)
         )
     }
 }
 
-@Preview(showBackground = true)
 @Composable
-fun BirthdayCardPreview() {
-    HappyBirthdayTheme {
-        GreetingText(message = "Happy Birthday Sam!", from = "From Emma")
+fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) {
+    // Create a box to overlap image and texts
+    Box(modifier) {
+        Image(
+            painter = painterResource(id = R.drawable.birthday_bg),
+            contentDescription = null,
+            contentScale = ContentScale.Fit,
+            alpha = 0.5F
+        )
+        GreetingText(
+            message = message,
+            from = from,
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(8.dp)
+        )
     }
 }
 
+@Preview(showBackground = false)
 @Composable
-fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) {
+private fun BirthdayCardPreview() {
+    HappyBirthdayTheme {
+        GreetingImage(
+            stringResource(R.string.happy_birthday_text),
+            stringResource(R.string.signature_text)
+        )
+    }
 }

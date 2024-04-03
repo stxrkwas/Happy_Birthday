@@ -72,9 +72,9 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) 
     // Create a box to overlap image and texts
     Box(modifier) {
         Image(
-            painter = painterResource(id = R.drawable.birthday_bg),
+            painter = painterResource(id = R.drawable.birthdaycake),
             contentDescription = null,
-            contentScale = ContentScale.Fit,
+            contentScale = ContentScale.FillHeight,
             alpha = 0.5F
         )
         GreetingText(

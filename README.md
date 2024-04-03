@@ -3,3 +3,5 @@
 ### Curso: Noções básicas do Android com Compose
 
 - <b>Exercício:</b> Criar um cartão de aniversário com o Android Studio.
+
+ - 🚨 Apesar de ter commits de vários usuários, fui eu (@stxrkwas) quem fez, os commits com outras contas foram enganos.  
